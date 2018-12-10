@@ -25,17 +25,17 @@ fs.readFile(plzPath, 'utf-8', (err, file) => {
 console.log("Ready to process PLZ requests");
 
 router.get('/*', function(req, res, next) {  
-  var input_plz=req.url.substr(1);
+  var input_plz=req.url.substr(1);//remove trailing slash
   //console.log(input_plz);
-  var picked=plzMap.get(input_plz);//remove trailing slash
+  var picked=plzMap.get(input_plz);
   //console.log(picked);
   if (picked != null)
   {
-   res.send(picked);
+   res.send('{"city":"'+picked+'"}');
 }
 else
 {
-  res.status(400).send('PLZ not found');
+  res.status(400).send('{"city":"not found"}');
 }   
 });
 
