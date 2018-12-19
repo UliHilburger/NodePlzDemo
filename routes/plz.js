@@ -12,7 +12,7 @@ console.log("Processing PLZ file");
 var count=0; 
 
 fs.readFile(plzPath, 'utf-8', (err, file) => {
-  const lines = file.split('\n')
+  const lines = file.split('\r\n')
   lines.forEach(function(line) {
     //console.log(line);
     var fragments=line.split(';');
