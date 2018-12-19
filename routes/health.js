@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 var fs = require('fs');
 var plzPath = path.join(__dirname, '../plz.txt');
-var cityPath = path.join(__dirname, '../city.txt');
+var cityPath = path.join(__dirname, '../cities.txt');
 
 router.get('/', function(req, res/*, next*/) {
   var fsizeplz=0;

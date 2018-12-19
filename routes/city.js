@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var os = require('os');
 
 var fs = require('fs');
 var path = require('path');
@@ -12,7 +13,7 @@ console.log("Processing cities file");
 var count=0; 
 
 fs.readFile(cityPath, 'utf-8', (err, file) => {
-  const lines = file.split('\r\n')
+  const lines = file.split(os.EOL);
   lines.forEach(function(line) {
     //console.log(line);
     var fragments=line.split(';');
