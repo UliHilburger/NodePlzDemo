@@ -31,7 +31,8 @@ router.get('/*', function(req, res, next) {
   //console.log(picked);
   if (picked != null)
   {
-   res.send('{"city":"'+picked+'"}');
+    picked=picked.replace(/,/g, '","');//convert comma separated numbers to json-style array
+    res.send('{"plz":["'+picked+'"]}');
 }
 else
 {

@@ -6,11 +6,13 @@ Call http://localhost:3000/plz/<zipcode>
 
 Example:
 
-http://localhost:3000/plz/12357 --> {"city":"Berlin"}
+http://localhost:3000/plz/12357 --> {"plz":["Berlin"]}
+
+http://localhost:3000/plz/01454 --> {"plz":["Radeberg","Wachau"]}
 
 Rest endpoint for lookup of zip code(s) corresponding to a german city, case insensitive
 
-Call http://localhost:3000/city/<Name of city>
+Call http://localhost:3000/city/<city>
   
 Browser encoding problems are automatically solved:
 
