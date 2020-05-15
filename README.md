@@ -35,3 +35,5 @@ http://localhost:3000/health
 {"outcome":"UP","checks":[{"name":"plz-city-files","state":"UP"}]}
 
 or just try http://localhost:3000/ ;-)
+
+For usage in ICP see dockerfile => set non-root user for running in ICP node = 999
